@@ -1,6 +1,8 @@
 :root {
     --mainBlue: #2a2a72;
-    --lightBlue: #009ffd;
+    --lightBlue: #2323f5;
+    --mainPurple: rgb(165, 0, 96);
+    --lightPurple: #f500fdcc;
     --mainWhite: #f3f3f3;
     --mainDark: #232528;
     --mainYellow: #ffa400;
