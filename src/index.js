@@ -8,6 +8,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import * as serviceWorker from './serviceWorker';
+import { ProductProvider } from './context';
 
 
 
@@ -15,9 +16,11 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
+    <ProductProvider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </ProductProvider>,
      document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

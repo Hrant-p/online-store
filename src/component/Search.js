@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './Search.css';
+import './Search.scss';
 
 class Search extends Component {
     render() {
         return (
-          <div d-flex justify-content-end>
+          <div className="d-flex justify-content-end">
             <form className="form-input">
               <input
                 className="search-input"
