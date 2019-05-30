@@ -5,7 +5,7 @@ const Title = ({ name, title }) => {
         <div className="row">
             <div className="col-10 mx-auto my-2 text-center text-title">
                 <h1 className="text-capitalize">
-                    {name}
+                    {name}{" "}
                     <span className="text-blue">
                         {title}
                     </span>

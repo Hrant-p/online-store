@@ -11,6 +11,7 @@ import Cart from './component/Cart';
 
 import logo from './logo.svg';
 import './App.css';
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -18,10 +19,11 @@ function App() {
             <Navbar />
         <Switch>
             <Route path='/' component={ProductList} exact />
-            <Route path='/details' component={Details} exact />
+            <Route path='/details/:id' component={Details} />
             <Route path='/cart' component={Cart} exact />
             <Route component={NotFound} />
         </Switch>
+            <Footer />
       
     </React.Fragment>
   );
