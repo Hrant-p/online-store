@@ -6,8 +6,10 @@
  
  .nav-bar {
     height: 70px;
-    background-color: #800080;
-    box-shadow: -3px 4px 3px -4px rgba(0,0,0,1);
+     background: rgb(127,23,198);
+    background: linear-gradient(90deg, rgba(127,23,198,1) 0%, rgba(23,110,184,1) 47%, rgba(246,195,6,1) 100%); 
+    border-bottom: 1px solid black;
+    box-shadow: -3px 4px 3px -4px rgba(0, 0, 0, 0.822);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -63,22 +65,10 @@
     
 }
 
-
-
-
-
-
-
-
-
 .cart-icon{
     height: 100%;
     margin-right: 5px;
 }
-
-
-
-
 
 @media only screen and (max-width: 800px) {
     .form-input{

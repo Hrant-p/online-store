@@ -39,7 +39,7 @@ class Product extends Component {
             {/* footer */}
             <div className="card-footer">
               <Link to={`/details/${id}`}>
-                <p className="align-self-center mb-0">{title}</p>
+                <p className="text-center mb-0">{title}</p>
               </Link>
               <h5 className="text-blue text-center mb-0">
                 <span>$</span>

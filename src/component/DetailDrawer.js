@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes, { shape } from 'prop-types';
+import './Details.scss';
+import { ButtonContainer } from './Button';
 
 class DetailDrawer extends Component {
 
@@ -17,22 +19,29 @@ class DetailDrawer extends Component {
         const { company, img, title, info, price, inCart, count } = this.props.productInfo;
         
         return (
-          <div className="detail-container mt-5">
-            <div className="col-md">
+          <div className="detail-container">
+            <div className="info-container">
+                <div className="title-field">
                     <h4>{title}</h4>
-                    <div className="img-field">
-                        <img src={img} alt="mobile image" />
-                    </div>
+                </div>
+                
+                <div className="slide-field">
+                    <img src={img} alt="mobile" />
+                </div>
+
+                <div className="price-cart-field">
                     <p> Price - {price}$</p>
-                    <button disabled={inCart ? true : false}>
-                        {inCart ? 'Phone Added in Cart' : (<span>Add in your cart <i className="fas fa-cart-plus"/></span>)}
-                    </button>
-                <div>
-                    <div className="card-footer">
-                        <p>
-                            {info}
-                        </p>
-                    </div>
+                    <p> Count - {count}</p>
+                    <ButtonContainer disabled={inCart ? true : false} onClick={() => console.log('clicked cart btn')}>
+                        {inCart ? ('Phone Added in Cart'
+                            ) : (
+                        <span>Add in your cart <i className="fas fa-cart-plus"/></span>
+                        )}
+                    </ButtonContainer>
+                </div>
+
+                <div className="info-area">
+                    <p>{info}</p>
                 </div>
             </div>
           </div>

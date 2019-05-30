@@ -1,26 +1,13 @@
 // Product List //
-$shadow : 0 0 20px 0 rgba(0,0,0,.2);
+$shadow : 0 0 20px 0 rgba(0,0,0,.5);
 
 .grid-container{
+    display: flex;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-flow: round($number: 2);
+    grid-template-columns: repeat(auto-fill, 220px);
     transition: color .2s ease;
 
-
-    @media only screen and (max-width: 1000px){
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    @media only screen and (max-width: 700px){
-        grid-template-columns: 1fr 1fr 1fr;
-
-    }
-    @media only screen and (max-width: 500px){
-        grid-template-columns: 1fr 1fr;
-    }
-    @media only screen and (max-width: 300px){
-        grid-template-columns: 1fr;
-    }
     .card{
         transition: .2s ease;
         img{

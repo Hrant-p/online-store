@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Title from './Title';
 import { ProductConsumer } from '../context';
 import Product from './Product';
+import "./ProductList.scss";
+
 
 class ProductList extends Component {
     
@@ -9,7 +11,7 @@ class ProductList extends Component {
 
         return (
             <React.Fragment>
-                <div className="py-4">
+                <div className="py-2">
                    <div className="container">
                         <Title name="our" title="Products"/>
                         <div className="grid-container">  {/* row */}

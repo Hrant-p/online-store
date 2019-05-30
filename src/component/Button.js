@@ -6,7 +6,7 @@ export const ButtonContainer = styled.button`
          width: 100px;
          text-align: center;
          background: transparent;
-         color: rgba(255, 255, 255, 0.897);
+         color: darkblue;
          border: none;
          box-shadow: -3px 4px 3px -2px rgba(0, 0, 0, 1);
          border-radius: 5px;
