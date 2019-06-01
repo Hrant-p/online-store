@@ -13,8 +13,34 @@
         grid-template-areas: "title img"
                              "price img"
                              "info  img";
-
+        @media only screen and (max-width: 900px) {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-areas:  "img"
+                                  "title"
+                                  "price"
+                                  "info";
+        }
         @media only screen and (max-width: 800px) {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-areas:  "img"
+                                  "title"
+                                  "price"
+                                  "info";
+        }
+        @media only screen and (max-width: 600px) {
+            .price-cart-field{
+                display: flex;
+                flex-direction: column;
+                
+                section{
+                margin: 10px auto;
+                }
+            }
+        }
+        @media only screen and (max-width: 450px) {
+            width: 100%;
             grid-template-columns: 1fr;
             grid-template-areas:  "img"
                                   "title"
@@ -23,15 +49,20 @@
             .slide-field{
                 img{
                     display: flex;
-                    width: 300px;
-                    height: 300px;
+                    width: 200px;
+                    height: 200px;
                 }
+            }
+            .price-cart-field{
+                display: flex;
+                flex-direction: column;
             }
         }
         .title-field{
             grid-area: title;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         .slide-field{
             display: flex;
@@ -47,8 +78,19 @@
         .price-cart-field{
             grid-area: price;
             display: flex;
+            align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            p{
+                margin: 0;
+            }
+            section{
+                display: flex;
+                justify-content: center;
+                button{
+                    margin: 0 10px;
+                }
+            }
         }
         .info-area{
             display: flex;
