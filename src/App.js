@@ -12,6 +12,7 @@ import Cart from './component/Cart';
 import logo from './logo.svg';
 import './App.css';
 import Footer from './component/Footer';
+import Slide from './component/Slide';
 
 function App() {
   return (

@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import PropTypes, { shape } from 'prop-types';
 import './Details.scss';
 import { ButtonContainer } from './Button';
+import Slide from './Slide';
+
 
 class DetailDrawer extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-            productCount: 0,
+            productCount: 1,
             addedToCart: this.props.inCart
             }
     };
@@ -37,7 +39,7 @@ class DetailDrawer extends Component {
                 </div>
                 
                 <div className="slide-field">
-                    <img src={img} alt="mobile" />
+                    <Slide source={img}/>
                 </div>
 
                 <div className="price-cart-field">
@@ -45,10 +47,12 @@ class DetailDrawer extends Component {
                     <section>Count
                         <ButtonContainer 
                             onClick={this.onDecrement}
-                            disabled={productCount < 1 || productCount > total ? true : false}
+                            disabled={productCount < 1 ? true : false}
                             >-</ButtonContainer>
                             {productCount}
-                        <ButtonContainer onClick={this.onIncrement}>+</ButtonContainer>
+                        <ButtonContainer 
+                            onClick={this.onIncrement}
+                            disabled={productCount > total ? true : false}>+</ButtonContainer>
                     </section>
                     <ButtonContainer 
                         disabled={inCart ? true : false} 
