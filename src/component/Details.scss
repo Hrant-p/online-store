@@ -12,7 +12,7 @@
         grid-gap: 10px 20px;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "title img"
-                             "price img"
+                             "info  img"
                              "info  img";
         @media only screen and (max-width: 900px) {
             width: 100%;
@@ -43,40 +43,71 @@
         @media only screen and (max-width: 450px) {
             width: auto; 
             grid-template-columns: 1fr;
+            grid-template-rows: 0.3fr 1fr 1fr 1fr;
             grid-template-areas:  "img"
                                   "title"
                                   "price"
                                   "info";
-            // .slide-field{
-            // }
             .price-cart-field{
                 display: flex;
                 flex-direction: column;
             }
         }
-        .title-field{
+        .info-field{
             grid-area: title;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            // margin: 0;
         }
         .slide-field{
-            display: flex;
+            height: 100%;
             box-sizing: border-box;
             grid-area: img;
-            justify-content: center;
-
 
             .myCarousel{
-                width: 400px;
+                width: 600px;
+                // height: 700px;
                 a > span{
                     box-shadow: $shadow;
                     border-radius: 5px;
                 }
-            }
-            img{
-                max-width: 400px;
-                max-height: 400px;
+                .carousel-inner{
+                    // margin-bottom: 100px;
+                }
+                .carousel-item{
+                    // width: 600px;
+                    // margin: 100px;
+                        :active{
+                            // margin: 0 300px;
+                        }
+                        img{
+                            // width: 600px;
+                            height: 600px;
+                        }
+                    }
+                ol{
+                    .carousel-indicators{
+                        margin-top: 300px;
+                    }
+                    li{
+                        width: 80px;
+                        height: 80px;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        text-indent: 0;
+                        padding: 6px;
+                        background-color: transparent;
+                        img{
+                            // width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    li.active{
+                        border-bottom: 2px solid blue;
+                    }
+                }
             }
         }
         .price-cart-field{
@@ -86,13 +117,13 @@
             justify-content: space-between;
             flex-wrap: wrap;
             p{
-                margin: 0;
+                // margin: 0;
             }
             section{
                 display: flex;
                 justify-content: center;
                 button{
-                    margin: 0 10px;
+                    margin: 10px 10px;
                 }
             }
         }

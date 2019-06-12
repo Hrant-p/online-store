@@ -34,39 +34,54 @@ class DetailDrawer extends Component {
         return (
           <div className="detail-container">
             <div className="info-container">
+              <div className="info-field">
+
                 <div className="title-field">
                     <h4>{title}</h4>
-                </div>
-                
-                <div className="slide-field">
-                    <Slide source={img}/>
+                    <hr />
                 </div>
 
                 <div className="price-cart-field">
-                    <p> Price - {price}$</p>
-                    <section>Count
-                        <ButtonContainer 
-                            onClick={this.onDecrement}
-                            disabled={productCount < 1 ? true : false}
-                            >-</ButtonContainer>
-                            {productCount}
-                        <ButtonContainer 
-                            onClick={this.onIncrement}
-                            disabled={productCount > total ? true : false}>+</ButtonContainer>
-                    </section>
-                    <ButtonContainer 
-                        disabled={inCart ? true : false} 
-                        onClick={() => console.log('clicked cart btn')}>
-                        {inCart ? ('Phone Added in Cart'
-                            ) : (
-                        <span>Add to cart <i className="fas fa-cart-plus"/></span>
-                        )}
+                  <p> Price - {price}$</p>
+                  <section>
+                    Count
+                    <ButtonContainer
+                      onClick={this.onDecrement}
+                      disabled={productCount < 1 ? true : false}
+                    >
+                      -
                     </ButtonContainer>
+                    {productCount}
+                    <ButtonContainer
+                      onClick={this.onIncrement}
+                      disabled={productCount > total ? true : false}
+                    >
+                      +
+                    </ButtonContainer>
+                  </section>
+                  <ButtonContainer
+                    disabled={inCart ? true : false}
+                    onClick={() => console.log("clicked cart btn")}
+                  >
+                    {inCart ? (
+                      "Phone Added in Cart"
+                    ) : (
+                      <span>
+                        Add to cart <i className="fas fa-cart-plus" />
+                      </span>
+                    )}
+                  </ButtonContainer>
                 </div>
+                
+              </div>
 
-                <div className="info-area">
-                    <p>{info}</p>
-                </div>
+              <div className="slide-field">
+                <Slide source={img} />
+              </div>
+
+              <div className="info-area">
+                <p>{info}</p>
+              </div>
             </div>
           </div>
         );
